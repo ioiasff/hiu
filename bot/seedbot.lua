@@ -221,210 +221,178 @@ function create_config( )
     "all",
     "leave_ban"
     },
-    sudo_users = {110626080,103649648,111020322,0,tonumber(our_id)},--Sudo users
+    sudo_users = {152485254,152350938,0,tonumber(our_id)},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Teleseed v2 - Open Source
-An advance Administration bot based on yagop/telegram-bot 
-
-https://github.com/SEEDTEAM/TeleSeed
-
+    about_text = [[DEATH v2 - NO
+🚩DEATH🚩
+🚩A R A S H🚩
 Admins
-@iwals [Founder]
-@imandaneshi [Developer]
-@Rondoozle [Developer]
-@seyedan25 [Manager]
-
-Special thanks to
-awkward_potato
-Siyanew
-topkecleon
-Vamptacus
-
+🚩A 
+🚩R
+🚩A
+🚩S
+🚩H
+♥🔍
+🅰
+@arash_admin_death
+✅✔
+🅰
 Our channels
-@teleseedch [English]
-@iranseed [persian]
+✨✨✨✨✨✨
+@deathch [persian]
 ]],
     help_text_realm = [[
-Realm Commands:
-
+realm Commands:
 !creategroup [Name]
-Create a group
-
+🚩Create a group🚩
 !createrealm [Name]
-Create a realm
-
+↪Create a realm↩
 !setname [Name]
-Set realm name
-
+🔘Set realm name🔘
 !setabout [GroupID] [Text]
-Set a group's about text
-
+♦Set a group's about text♦
 !setrules [GroupID] [Text]
-Set a group's rules
-
+🔍Set a group's rules🔍
 !lock [GroupID] [setting]
-Lock a group's setting
-
+🔒Lock a group's setting🔒
 !unlock [GroupID] [setting]
-Unock a group's setting
-
+🔓Unock a group's setting🔓
 !wholist
-Get a list of members in group/realm
-
+🔺Get a list of members in group/realm🔺
 !who
-Get a file of members in group/realm
-
+❗Get a file of members in group/realm❗
 !type
-Get group type
-
+🔷Get group type🔶
 !kill chat [GroupID]
-Kick all memebers and delete group
-
+🚫Kick all memebers and delete group🚫
 !kill realm [RealmID]
-Kick all members and delete realm
-
+❌Kick all members and delete realm❌
 !addadmin [id|username]
-Promote an admin by id OR username *Sudo only
-
+🌟Promote an admin by id OR username *Sudo only🌟
 !removeadmin [id|username]
-Demote an admin by id OR username *Sudo only
-
+✖🌟Demote an admin by id OR username *Sudo only✖🌟
 !list groups
 Get a list of all groups
-
 !list realms
-Get a list of all realms
-
+◀Get a list of all realms▶
 !log
-Grt a logfile of current group or realm
-
+💥Grt a logfile of current group or realm💥
 !broadcast [text]
 !broadcast Hello !
-Send text to all groups
-Only sudo users can run this command
-
+📢Send text to all groups📢
+💢Only sudo users can run this command💢
 !br [group_id] [text]
-!br 123456789 Hello !
-This command will send text to [group_id]
-
-
-**U can use both "/" and "!" 
-
-
-*Only admins and sudo can add bots in group
-
-
-*Only admins and sudo can use kick,ban,unban,newlink,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
-*Only admins and sudo can use res, setowner, commands
+!br 123456789 Hello
+ 🔊This command will send text to [group_id]🔊
+**U can use both "/" and "!" 🔥
+*Only admins and sudo can add bots in group🤖➕
+*Only admins and sudo can use kick,ban,unban,newlink,setphoto,setname,lock,unlock,set rules,set about and settings commands⭕
+*Only admins and sudo can use res, setowner, commands✴
 ]],
     help_text = [[
 Commands list :
-
 !kick [username|id]
-You can also do it by reply
-
+You can also do it by reply😎
+😎اخراج کسی از گروه
 !ban [ username|id]
 You can also do it by reply
-
+بن کردن کسی از گروه⭕
 !unban [id]
-You can also do it by reply
-
+You can also do it by reply⭕❌
+از بن در اوردن کسی در گروه⭕❌
 !who
-Members list
-
+🚹Members list🚹
+لیست اعضا
 !modlist
-Moderators list
-
+👥⭐Moderators list⭐👥
+لیست مدیران گروه
 !promote [username]
-Promote someone
-
+Promote someone👤⭐
+مدیر کردن یک نفر در گروه
 !demote [username]
-Demote someone
-
+Demote someone👤⭐❌
+بر کنار کردن کسی از مدیریت در گروه
 !kickme
-Will kick user
-
+Will kick user👤➖
+بیرون رفتن از گروه 
 !about
-Group description
-
+Group descriptionℹ
+درباره گروه
 !setphoto
-Set and locks group photo
-
+Set and locks group photo🗻
+گزاشتن عکس برای گروه
 !setname [name]
-Set group name
-
+Set group name✴➕
+گزاشتن اسم برای گروه 
 !rules
-Group rules
-
+Group rules⚠
+قوانین گروه
 !id
-return group id or user id
-
+return group id or user 🆔
+ایدی گروه/با ریپلی کردن پیام ایدی فرد ی
 !help
-
+لیست دستورات گروه
 !lock [member|name|bots|leave]	
-Locks [member|name|bots|leaveing] 
-
+Locks [member|name|bots|leaveing]🔒
+قفل|دروازه گروه|اسم گروه|ورود بات |لفت دادن
 !unlock [member|name|bots|leave]
-Unlocks [member|name|bots|leaving]
-
+Unlocks [member|name|bots|leaving]🔒
+باز کردن قفل |دروازه گروه|اسم گروه|ورود ربات|لفت دادن
 !set rules <text>
-Set <text> as rules
-
+🔱Set <text> as rules🔱
+گزاشتن قوانین برای گروه
 !set about <text>
-Set <text> as about
-
+♎Set <text> as about♎
+گزاشتن موضوع گروه 
 !settings
-Returns group settings
-
+♐Returns group settings♐
+تنظیمات گروه 
 !newlink
-create/revoke your group link
-
+create/revoke your group link🆕🔗
+لینک جدید
 !link
-returns group link
-
+returns group link🔗
+لینک گروه
 !owner
-returns group owner id
-
+returns group owner 🆔
+ایدی صاحب گروه
 !setowner [id]
-Will set id as owner
-
+♠Will set id as owner♠
+تعیین کردن کس دیگری به عنوان صاحب گروه
 !setflood [value]
-Set [value] as flood sensitivity
-
+Set [value] as flood sensitivity✨
+تعیین کردن مقدار فلود گروه 
 !stats
-Simple message statistics
-
+🔴Simple message statistics🔴
+امار پیام های ارسالی گروه
 !save [value] <text>
-Save <text> as [value]
-
+🌠Save <text> as [value]🌠
+گزاشتن دستوری در گروه با متن
 !get [value]
-Returns text of [value]
-
+Returns text of [value]🔘
+دریافت متن دستور ذخیره شده
 !clean [modlist|rules|about]
-Will clear [modlist|rules|about] and set it to nil
-
+Will clear [modlist|rules|about] and set it to nil🔃
+پاک کردن |مدیران گروه|قوانین|درباره گروه
 !res [username]
-returns user id
+returns user 🆔
 "!res @username"
-
+پیدا کردن ایدی یک نفر از طریق نام کاربری
 !log
-will return group logs
-
+will return group logs❇
+دستورات وارد شده در گروه
 !banlist
-will return group ban list
-
+will return group ban list💢
+لیست کسانی که بن شده اند
 **U can use both "/" and "!" 
-
-
+شما می توانید از "/" و‌ "!"  استفاده کنید
 *Only owner and mods can add bots in group
-
-
+فقط صاحب گروه و مدیران گروه میتوانند بات در گروه اد کنند
 *Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
+فقط مدیران گروه و صاحب گروه میتوانند از دستورات اخراج، بن، ان بن، لینک جدید،دریافت لینک گروه،گزاشتن نام برای گروه،گزاشتن عکس برای گروه،قفل کردن ،باز کردن قفل،گزاشتن قوانین استفاده کنند
 *Only owner can use res,setowner,promote,demote and log commands
-
+فقط صاحب گروه میتواند کسی را مدیر گروه کند و یا کسی را از مدیریت گروه برکنار کند و یا از طریق نام کاربری ایدی یک نفر را پیدا کند
 ]]
   }
   serialize_to_file(config, './data/config.lua')
